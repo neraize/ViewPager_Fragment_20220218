@@ -24,5 +24,8 @@ class MainActivity : AppCompatActivity() {
     fun setValues(){
         mAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mAdapter
+
+        //재사용성 무시하도록 하는 코드 예시(사용성 개선)
+        mainViewPager.offscreenPageLimit =5
     }
 }
