@@ -6,6 +6,16 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.nepplus.viewpager_fragment_20220218.fragments.*
 
 class MainViewPagerAdapter(fm:FragmentManager):FragmentPagerAdapter(fm) {
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0-> "이름"
+            1-> "출생년도"
+            else-> "인사말"
+        }
+    }
+
+
 /*    override fun getCount(): Int {
         return 3
     }*/
